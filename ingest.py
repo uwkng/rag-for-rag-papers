@@ -1,5 +1,3 @@
-# Load & Chunk PDFs
-
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from pathlib import Path
 from pypdf import PdfReader
@@ -10,6 +8,7 @@ def data_loader():
     """
     Data Loader to iterate over the PDFs, extract the text and append it to an shared list.
     """
+
     all_docs = []
 
     for pdf in DATA_PATH.iterdir():
@@ -21,6 +20,9 @@ def data_loader():
         return all_docs
 
 def chunking(all_docs):
+    """
+    Creates chunks from an list.
+    """
 
     splitter = RecursiveCharacterTextSplitter(
         chunk_size = 1000,
