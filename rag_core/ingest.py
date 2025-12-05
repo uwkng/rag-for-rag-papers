@@ -6,7 +6,8 @@ def data_loader():
     """
     Data Loader to iterate over the PDFs, extract the text and append it to an shared list.
     """
-    DATA_PATH = Path("data/raw")
+    ROOT = Path(__file__).resolve().parent.parent
+    DATA_PATH = ROOT / "data" / "raw"
 
     all_docs = []
 

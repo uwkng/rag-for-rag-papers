@@ -53,3 +53,4 @@ rag_chain = ({"context": retriever, "question": RunnablePassthrough()}
 
 user_input = input("Ask something about RAG: ")
 message = rag_chain.invoke(user_input)
+print(message.content)
