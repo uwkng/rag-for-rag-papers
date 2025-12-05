@@ -1,0 +1,6 @@
+pypdf
+langchain-text-splitters
+langchain
+langchain-community
+langchain-chroma
+sentence-transformers
