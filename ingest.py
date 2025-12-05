@@ -2,12 +2,11 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from pathlib import Path
 from pypdf import PdfReader
 
-DATA_PATH = Path("data/raw")
-
 def data_loader():
     """
     Data Loader to iterate over the PDFs, extract the text and append it to an shared list.
     """
+    DATA_PATH = Path("data/raw")
 
     all_docs = []
 
