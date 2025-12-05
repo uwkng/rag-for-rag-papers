@@ -7,12 +7,8 @@ all_docs = data_loader()
 chunked_docs = chunking(all_docs)
 embedding_func = embedding_function()
 
-vector_store = Chroma(
-    chunked_docs,
-    embedding_function=embedding_func,
+vector_store = Chroma.from_texts(
+    texts = chunked_docs,
+    embedding = embedding_func,
     persist_directory="chroma_db"
 )
-
-results = vector_store.similarity_search(query="artifical intelligence", k=1)
-for doc in results:
-    print(f"* {doc.page_content} [{doc.metadata}]")
