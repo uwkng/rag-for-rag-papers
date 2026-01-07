@@ -12,5 +12,5 @@ This project demonstates how to build a complete RAG pipeline using PDFs as the 
 The following diagram shows the _Naive RAG_ pipeline implemented in this project:
 
 <p align="center">
-    <img src="assets/rag-for-rag_architecture.png">
+    <img src="assets/rag_for_rag_architecture.png">
 </p>
