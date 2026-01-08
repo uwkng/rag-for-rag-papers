@@ -1,6 +1,8 @@
 from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_community.document_loaders.parsers import RapidOCRBlobParser
+from langchain_community.document_loaders import PyPDFLoader
+
 from pathlib import Path
-from pypdf import PdfReader
 
 def data_loader():
     """
@@ -12,11 +14,15 @@ def data_loader():
     all_docs = []
 
     for pdf in DATA_PATH.iterdir():
-        reader = PdfReader(str(pdf))
-        text = ""
-        for page in reader.pages:
-            text += page.extract_text() or ""
-        all_docs.append(text)
+
+        loader = PyPDFLoader(
+            str(pdf),
+            mode="page",
+            images_inner_format="markdown-img",
+            images_parser=RapidOCRBlobParser(),
+        )
+        
+        all_docs.extend(loader.load())
         
     return all_docs
 
