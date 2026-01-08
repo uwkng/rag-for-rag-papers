@@ -7,6 +7,17 @@ A naive Retrieval-Augmented Generation (RAG) system designed to answer questions
 
 This project demonstates how to build a complete RAG pipeline using PDFs as the data source, a modern embedding model, a vector database and a simple prompt-based LLM.
 
+# Table of Contents
+
+- [Key Features](#key-features)
+- [System Architecture](#system-architecture)
+
+# Key Features
+
+- Document Ingestion & Chunking
+- Embedding-based retrieval
+- Prompt augmentation
+
 # System Architecture
 
 The following diagram shows the _Naive RAG_ pipeline implemented in this project:
@@ -14,3 +25,4 @@ The following diagram shows the _Naive RAG_ pipeline implemented in this project
 <p align="center">
     <img src="assets/rag_for_rag_architecture.png">
 </p>
+
