@@ -1,15 +1,11 @@
-from langchain_community.embeddings import HuggingFaceBgeEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 
 def embedding_function():
 
-    embedding_model_name = "BAAI/bge-small-en"
-    embedding_model_kwargs = {"device": "cpu"}
-    embedding_model_encode_kwargs = {"normalize_embeddings": True}
+    model = "Qwen/Qwen3-Embedding-0.6B"
 
-    embedding_model = HuggingFaceBgeEmbeddings(
-        model_name = embedding_model_name,
-        model_kwargs = embedding_model_kwargs,
-        encode_kwargs = embedding_model_encode_kwargs,
+    embedding_model = HuggingFaceEmbeddings(
+        model_name=model
     )
 
     return embedding_model

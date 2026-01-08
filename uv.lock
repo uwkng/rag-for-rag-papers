@@ -1792,7 +1792,7 @@ requires-dist = [
     { name = "langchain-huggingface" },
     { name = "langchain-text-splitters" },
     { name = "pypdf" },
-    { name = "sentence-transformers" },
+    { name = "sentence-transformers", specifier = ">=5.2.0" },
 ]
 
 [[package]]
