@@ -1,7 +1,0 @@
-pypdf
-langchain-text-splitters
-langchain
-langchain-huggingface
-langchain-community
-langchain-chroma
-sentence-transformers
