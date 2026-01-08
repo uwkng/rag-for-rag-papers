@@ -17,7 +17,8 @@ def data_loader():
         for page in reader.pages:
             text += page.extract_text() or ""
         all_docs.append(text)
-        return all_docs
+        
+    return all_docs
 
 def chunking(all_docs):
     """
