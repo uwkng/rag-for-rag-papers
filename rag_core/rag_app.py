@@ -51,6 +51,7 @@ rag_chain = ({"context": retriever, "question": RunnablePassthrough()}
              | prompt_template
              | chat_model)
 
-user_input = input("Ask something about RAG: ")
-message = rag_chain.invoke(user_input)
-print(message.content)
+def test():
+    user_input = input("Ask something about RAG: ")
+    message = rag_chain.invoke(user_input)
+    print(message.content)
