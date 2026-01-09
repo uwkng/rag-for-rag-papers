@@ -6,10 +6,16 @@ from ingest import data_loader, chunking
 from embed import embedding_function
 from vectorstore import setup_vectorstore
 
-docs = data_loader()
-chunks = chunking(docs)
-embedding_model = embedding_function()
-vectorstore = setup_vectorstore(docs, chunks, embedding_model)
+
+
+if chroma_files_existing:
+    print("d")
+else:
+    print("Building up the vector store...")
+    docs = data_loader()
+    chunks = chunking(docs)
+    embedding_model = embedding_function()
+    vectorstore = setup_vectorstore(docs, chunks, embedding_model)
 
 llm = HuggingFaceEndpoint(
     repo_id="deepseek-ai/DeepSeek-R1-0528",

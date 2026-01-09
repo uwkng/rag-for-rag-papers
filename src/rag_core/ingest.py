@@ -39,3 +39,18 @@ def chunking(all_docs):
     full_text = "\n\n".join(all_docs)
     chunked_texts = splitter.split_text(full_text)
     return chunked_texts
+
+def smoke_test_ingestion():
+    """
+    Smoke tests to ensure that text, tables and images get retrieved
+    """
+    print("---INGESTION---")
+    docs = data_loader()
+    print(f"Length of all the ingested documents: {len(docs)}")
+    print(f"PDF Site with figure: {docs[2]}")
+    print(f"PDF Site with table: {docs[24]}")
+
+
+# Smoke tests to ensure that text, tables and images get retrieved
+if __name__ == "__main__":
+    smoke_test_ingestion()
