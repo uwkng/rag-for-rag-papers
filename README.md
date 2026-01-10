@@ -1,4 +1,6 @@
-# RAG-for-RAG - A Retrieval-Augmented-System trained on RAG research papers
+# :speech_balloon::mortar_board: RAG-for-RAG - A Retrieval-Augmented-System trained on RAG research papers
+
+:wrench: Currently under construction
 
 A naive Retrieval-Augmented Generation (RAG) system designed to answer questions about RAG architectures, technique and research. It is built entirely on top of scientific papers about RAG.
 
@@ -7,18 +9,18 @@ A naive Retrieval-Augmented Generation (RAG) system designed to answer questions
 
 This project demonstates how to build a complete RAG pipeline using PDFs as the data source, a modern embedding model, a vector database and a simple prompt-based LLM.
 
-# Table of Contents
+# :notebook_with_decorative_cover: Table of Contents
 
 - [Key Features](#key-features)
 - [System Architecture](#system-architecture)
 
-# Key Features
+# :page_with_curl: Key Features
 
 - Document Ingestion & Chunking
 - Embedding-based retrieval
 - Prompt augmentation
 
-# System Architecture
+# :bridge_at_night: System Architecture
 
 The following diagram shows the _Naive RAG_ pipeline implemented in this project:
 
